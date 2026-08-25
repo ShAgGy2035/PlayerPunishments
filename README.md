@@ -1,6 +1,6 @@
 # Player Punishments
 
-CounterStrikeSharp plugin that adds server-console/RCON commands for checking player state, slaying, and slapping players. It is designed for ShAgGy's Ultimate CS2 RCON/Server Tool (https://github.com/ShAgGy2035/Ultimate-RCON-Server-Tool) and does not require a separate admin plugin.
+A [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp) plugin that adds server-console/RCON commands for checking player state, slaying, and slapping players. It is designed for [ShAgGy's Ultimate CS2 RCON/Server Tool](https://github.com/ShAgGy2035/Ultimate-RCON-Server-Tool) and does not require a separate admin plugin.
 
 Version: 1.0.0  
 Author: ShAgGy
@@ -10,35 +10,38 @@ Author: ShAgGy
 - Counter-Strike 2 dedicated server
 - Metamod:Source
 - CounterStrikeSharp with .NET 10 support
-- CounterStrikeSharp API `1.0.372` or a compatible newer release
+- CounterStrikeSharp API `1.0.372`
 
 ## Commands
 
 Commands are server-console/RCON only. Players cannot execute them from chat or their client console.
 
-```text
-css_alive [#userid|steamid64|exact name]
-css_slay <#userid|steamid64|exact name>
-css_slap <#userid|steamid64|exact name> [damage]
-```
+| Command | Description |
+| --- | --- |
+| `css_alive [#userid\|steamid64\|exact name]` | Reports the state and health of one player, or all connected players when no target is supplied. |
+| `css_slay <#userid\|steamid64\|exact name>` | Kills a living player. |
+| `css_slap <#userid\|steamid64\|exact name> [damage]` | Damages and launches a living player. Damage defaults to `5` and must be from `0` to `100`. |
+
+Target names are matched case-insensitively but must otherwise be exact; wrap names containing spaces in quotes. SteamID and name lookup target human players, while `#userid` can also resolve a bot. Prefer `#userid` from the server's `status` output because names may be ambiguous.
 
 Examples:
 
 ```text
 css_alive
 css_alive #12
+css_alive "Player Name"
 css_slay #12
 css_slap #12
 css_slap #12 10
 ```
 
-`css_alive` lists every connected player and reports `alive` or `dead` with current health. When a target is supplied, it reports only that player.
+`css_alive` includes bots when listing all connected players. When a target is supplied, it reports only the selected player.
 
-`css_slap` defaults to 5 damage when damage is omitted. Damage can be from 0 to 100. A slap also applies randomized horizontal and upward velocity. Lethal slap damage slays the player.
-
-The CS2 RCON tool uses `#userid`, which is taken from the server's `status` output and avoids ambiguous player names.
+Every slap applies randomized horizontal and upward velocity, including a `0`-damage slap. Lethal slap damage slays the player.
 
 ## Build
+
+Install the .NET 10 SDK, then run:
 
 ```powershell
 dotnet build PlayerPunishments.csproj -c Release
@@ -56,9 +59,16 @@ To build and create an installation ZIP:
 .\build-release.ps1
 ```
 
+The script creates both:
+
+```text
+release/PlayerPunishments/PlayerPunishments.dll
+release/PlayerPunishments-v1.0.0.zip
+```
+
 ## Install
 
-Extract or copy the plugin to:
+Extract the ZIP into `game/csgo/addons/counterstrikesharp/plugins`, or copy the DLL so the final path is:
 
 ```text
 game/csgo/addons/counterstrikesharp/plugins/PlayerPunishments/PlayerPunishments.dll

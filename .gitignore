@@ -5,5 +5,5 @@ release/
 *.user
 *.suo
 *.pdb
-*.ps1
-*.code-workspace
+/build-release.ps1
+/PlayerPunishments.code-workspace
