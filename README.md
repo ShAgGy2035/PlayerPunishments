@@ -5,6 +5,10 @@ A [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp) plugin 
 Version: 1.0.0  
 Author: ShAgGy
 
+## Download
+
+Download the latest installation ZIP from [GitHub Releases](https://github.com/ShAgGy2035/PlayerPunishments/releases). Compiled binaries are not distributed from the repository's source file listing.
+
 ## Requirements
 
 - Counter-Strike 2 dedicated server
@@ -39,36 +43,9 @@ css_slap #12 10
 
 Every slap applies randomized horizontal and upward velocity, including a `0`-damage slap. Lethal slap damage slays the player.
 
-## Build
-
-Install the .NET 10 SDK, then run:
-
-```powershell
-dotnet build PlayerPunishments.csproj -c Release
-```
-
-The plugin DLL is created at:
-
-```text
-bin/Release/net10.0/PlayerPunishments.dll
-```
-
-To build and create an installation ZIP:
-
-```powershell
-.\build-release.ps1
-```
-
-The script creates both:
-
-```text
-release/PlayerPunishments/PlayerPunishments.dll
-release/PlayerPunishments-v1.0.0.zip
-```
-
 ## Install
 
-Extract the ZIP into `game/csgo/addons/counterstrikesharp/plugins`, or copy the DLL so the final path is:
+Download the installation ZIP from [GitHub Releases](https://github.com/ShAgGy2035/PlayerPunishments/releases), then extract it into `game/csgo/addons/counterstrikesharp/plugins`. The final DLL path should be:
 
 ```text
 game/csgo/addons/counterstrikesharp/plugins/PlayerPunishments/PlayerPunishments.dll
