@@ -1,6 +1,6 @@
 # Player Punishments
 
-CounterStrikeSharp plugin that adds server-console/RCON commands for checking player state, slaying, and slapping players. It is designed for ShAgGy's Ultimate CS2 RCON/Server Tool and does not require a separate admin plugin.
+CounterStrikeSharp plugin that adds server-console/RCON commands for checking player state, slaying, and slapping players. It is designed for ShAgGy's Ultimate CS2 RCON/Server Tool (https://github.com/ShAgGy2035/Ultimate-RCON-Server-Tool) and does not require a separate admin plugin.
 
 Version: 1.0.0  
 Author: ShAgGy

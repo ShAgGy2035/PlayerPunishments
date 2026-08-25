@@ -5,3 +5,5 @@ release/
 *.user
 *.suo
 *.pdb
+*.ps1
+*.code-workspace
