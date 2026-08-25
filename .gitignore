@@ -2,6 +2,7 @@ bin/
 obj/
 release/
 .vs/
+.vscode/
 *.user
 *.suo
 *.pdb
