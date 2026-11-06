@@ -2,15 +2,13 @@
 
 A [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp) plugin that adds server-console/RCON commands for slaying and slapping players. It is designed for [ShAgGy's Ultimate CS2 RCON/Server Tool](https://github.com/ShAgGy2035/Ultimate-RCON-Server-Tool) and does not require a separate admin plugin.
 
-Development version: 1.0.2 (unreleased).
-
-Latest finalized local release: 1.0.1, prepared on 2026-11-06. GitHub publication is pending. New changes belong in the local [1.0.2 release notes](Release%20Notes-1.0.2.md); finalized 1.0.1 notes are read-only and hash-protected. Plugin release-note files remain local and excluded from Git.
+Version: 1.0.1
 
 Author: ShAgGy
 
 Use it only if your existing administration package does not already provide `css_slay` and `css_slap`. Universal is optional: the commands also work directly from the server console or an authorized RCON client.
 
-**New installation?** Follow [Install and Verify](#install). **Upgrading?** Read the [compatibility warning](#upgrade-and-compatibility) first. See the [1.0.1 release notes](Release%20Notes-1.0.1.md) for what changed.
+**New installation?** Follow [Install and Verify](#install). **Upgrading?** Read the [compatibility warning](#upgrade-and-compatibility) first. See the [1.0.1 release notes](https://github.com/ShAgGy2035/PlayerPunishments/releases/tag/v1.0.1) for what changed.
 
 ## Contents
 
@@ -23,7 +21,6 @@ Use it only if your existing administration package does not already provide `cs
   - [Test on a Non-Production Server](#test-on-a-non-production-server)
 - [RCON Tool Integration](#rcon-tool-integration)
 - [Configuration and Diagnostics](#configuration)
-- [Building a Local Package](#building-a-local-package)
 - [Troubleshooting](#troubleshooting)
 
 ## Requirements
@@ -37,7 +34,7 @@ Use it only if your existing administration package does not already provide `cs
 
 Download the latest installation ZIP from [GitHub Releases](https://github.com/ShAgGy2035/PlayerPunishments/releases). Compiled binaries are not distributed from the repository's source file listing.
 
-Version 1.0.1 is not yet published. Download the matching release when it becomes available, not an older build with different command ownership.
+Download version 1.0.1, not an older build with different command ownership.
 
 ## Upgrade and Compatibility
 
@@ -127,12 +124,6 @@ For optional tracking:
 Tracking records fixed command names and outcomes: started, succeeded, missing or ambiguous target, dead target, invalid damage, or no players. It omits target names, user IDs, Steam IDs, raw arguments, chat, and credentials. Disabling it suppresses diagnostic entries without changing replies or behavior.
 
 **Review logs before sharing:** ordinary command replies and successful-action logs are unchanged and can contain player names and user IDs. Those are not the secret-safe debug entries.
-
-## Building a local package
-
-Run `.\build-release.ps1` from PowerShell. It builds `bin\Release\PlayerPunishments.zip` and writes `PlayerPunishments.zip.sha256` beside it after closing the archive. Add `-Verbose` for checksum-generation diagnostics. Rebuild after any DLL change so the checksum always matches the final ZIP.
-
-This does not upload, publish, or deploy. When publication is explicitly approved, include the matching checksum file and verify GitHub's release-asset SHA-256 digest against the final ZIP. Universal automatically uses that API digest, not the sidecar; absent digest metadata still requires manual integrity approval.
 
 ## Troubleshooting
 
