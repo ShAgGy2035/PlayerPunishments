@@ -2,7 +2,7 @@
 
 A [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp) plugin that adds server-console/RCON commands for slaying and slapping players. It is designed for [ShAgGy's Ultimate CS2 RCON/Server Tool](https://github.com/ShAgGy2035/Ultimate-RCON-Server-Tool) and does not require a separate admin plugin.
 
-Development version: 1.0.1
+Version: 1.0.1
 
 Author: ShAgGy
 
