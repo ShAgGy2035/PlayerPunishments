@@ -6,7 +6,7 @@ Version: 1.0.1
 
 Author: ShAgGy
 
-Use it only if your existing administration package does not already provide `css_slay` and `css_slap`. Universal is optional: the commands also work directly from the server console or an authorized RCON client.
+Use it only if your existing administration package does not already provide `css_slay` and `css_slap`. Ultimate CS2 RCON/Server Tool is optional: the commands also work directly from the server console or an authorized RCON client.
 
 **New installation?** Follow [Install and Verify](#install). **Upgrading?** Read the [compatibility warning](#upgrade-and-compatibility) first. See the [1.0.1 release notes](https://github.com/ShAgGy2035/PlayerPunishments/releases/tag/v1.0.1) for what changed.
 
@@ -93,7 +93,7 @@ css_slay #12
 
 ## RCON Tool Integration
 
-Select the player in Universal's player table, then use **Slay** or **Slap**. Universal sends the selected user ID and its configured slap damage:
+Select the player in Ultimate CS2 RCON/Server Tool's player table, then use **Slay** or **Slap**. Ultimate CS2 RCON/Server Tool sends the selected user ID and its configured slap damage:
 
 ```text
 css_slap #<userid> <damage>
@@ -102,7 +102,7 @@ css_slay #<userid>
 
 The plugin writes success and failure messages back to the server console, so they are visible in RCON output and logs.
 
-Universal's Slap damage setting is under **Settings > Settings > General** and accepts `0`-`99`. Direct plugin commands accept `0`-`100`. Alive/health columns require Companion's `css_alive`, not this plugin.
+Ultimate CS2 RCON/Server Tool's Slap damage setting is under **Settings > Settings > General** and accepts `0`-`99`. Direct plugin commands accept `0`-`100`. Alive/health columns require Companion's `css_alive`, not this plugin.
 
 <a id="configuration"></a>
 
